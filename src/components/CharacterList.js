@@ -1,11 +1,15 @@
 import React from 'react';
 import ChatacterCard from './CharacterCard';
 
-function ChatacterList() {
+function ChatacterList(props) {
+  let chatacterList = props.characters.map((character) => {
+  return <ChatacterCard key={character.id} character={character} />   
+  });
+
   return (
-    <div className="ChatacterList">
-        <ChatacterCard/>    
-    </div>
+    <ul className="ChatacterList">
+      {chatacterList}
+    </ul>
   );
 }
 

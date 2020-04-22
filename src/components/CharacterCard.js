@@ -1,10 +1,13 @@
 import React from 'react';
 
-function ChatacterCard() {
+function ChatacterCard(props) {
+  
   return (
-    <div className="ChatacterCard">
-        
-    </div>
+    <li className="ChatacterCard">
+      <img src={props.character.image} alt={`Foto de ${props.character.name}`} />
+      <h3>{props.character.name}</h3>
+      <p>{props.character.species}</p>
+    </li>
   );
 }
 

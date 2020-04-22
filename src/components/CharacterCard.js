@@ -2,8 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 function ChatacterCard(props) {
-  // console.log(props.character);
-  
   return (
     <li className="ChatacterCard">
       <Link to={`/character/${props.character.id}`}>

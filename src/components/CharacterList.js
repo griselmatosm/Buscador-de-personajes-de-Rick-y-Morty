@@ -4,21 +4,29 @@ import CharacterCard from './CharacterCard';
 import '../styles/CharacterList.css';
 
 function CharacterList(props) {
-
   let characterList = props.characters.map((character) => {
     return <CharacterCard key={character.id} character={character} />;
   });
 
   if (characterList.length > 0) {
-    return <ul className="CharacterList">{characterList}</ul>;
+    return (
+      <section className="CharacterList-section">
+        <ul className="CharacterList">{characterList}</ul>
+      </section>
+    );
   } else {
-    return <p>No hay ningún personaje que coincida con la palabra {props.searchFilter}</p>;
+    return (
+      <div className="CharacterList-notfound">
+        <p>There is no any character that matches with the word </p>
+        <span className="CharacterList-notfound-word"> {props.searchFilter}</span>
+      </div>
+    );
   }
 }
 
 // Aquí defino las propTypes
 CharacterList.propTypes = {
-  characters: PropTypes.arrayOf(PropTypes.object)
+  characters: PropTypes.arrayOf(PropTypes.object),
 };
 
 export default CharacterList;

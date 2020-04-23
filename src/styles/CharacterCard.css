@@ -4,6 +4,7 @@
     border-radius: 10px;
     height: 350px;
     transition: all ease 0.7s;
+    margin: 30px;
 }
 
 .CharacterCard:hover{

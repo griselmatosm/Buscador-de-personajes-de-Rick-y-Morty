@@ -8,16 +8,16 @@ function CharacterDetail(props) {
   if (props.character === undefined) {
     return (
       <div className="CharacterDetail">
-        <Link className="Character-link" to="/"> Volver </Link>
+        <Link className="Character-link" to="/"> Back </Link>
         <div className="Character-info">
-          <p>Personaje no encontrado</p>
+          <p>Character not found</p>
         </div>
       </div>
     );
   } else {
     return (
       <div className="CharacterDetail">
-        <Link className="Character-link" to="/"> Volver </Link>
+        <Link className="Character-link" to="/"> Back </Link>
         <div className="Character-info">
           <img className="Character-image" src={props.character.image} alt={`Foto de ${props.character.name}`} />
           <div>

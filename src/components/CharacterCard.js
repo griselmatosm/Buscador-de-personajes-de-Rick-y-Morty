@@ -8,7 +8,7 @@ function CharacterCard(props) {
   return (
     <Link to={`/character/${props.character.id}`}>
       <li className="CharacterCard">
-        <img className="CharacterCard-image" src={props.character.image} alt={`Foto de ${props.character.name}`} title={`Foto de ${props.character.name}`} />
+        <img className="CharacterCard-image" src={props.character.image} alt={props.character.name} title={`Picture of ${props.character.name}`} />
         <h3 className="CharacterCard-name">{props.character.name}</h3>
         <p className="CharacterCard-species">{props.character.species}</p>
       </li>

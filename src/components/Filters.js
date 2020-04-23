@@ -22,7 +22,7 @@ const handleSubmit = ev => {
   return (
     <form className="Filters" onSubmit={handleSubmit}>
       <label>
-        <input className="filter-text" type="text" placeholder="Introduce el nombre de un personaje" name="search" value={props.value} onChange={handleInputText}/>
+        <input className="filter-text" type="text" placeholder="Search a character" name="search" value={props.value} onChange={handleInputText}/>
       </label>    
     </form>
   );

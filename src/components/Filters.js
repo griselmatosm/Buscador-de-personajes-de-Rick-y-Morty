@@ -13,12 +13,15 @@ const handleInputText = (ev) => {
   props.handleInputText(data)
 }
 
+const handleSubmit = ev => {
+  ev.preventDefault();
+}
+
   return (
-    <form className="Filters">
+    <form className="Filters" onSubmit={handleSubmit}>
       <label>
         <input className="filter-text" type="text" placeholder="Introduce el nombre de un personaje" name="search" value={props.value} onChange={handleInputText}/>
-      </label>
-    
+      </label>    
     </form>
   );
 }

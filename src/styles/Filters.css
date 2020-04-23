@@ -1,0 +1,9 @@
+.Filters{
+    text-align: center;
+    grid-column: span 4;
+}
+
+.filter-text{
+    width: 300px;
+    padding: 10px;
+}

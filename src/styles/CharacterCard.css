@@ -1,0 +1,16 @@
+.ChatacterCard{
+    background-color: rgb(14, 145, 145);
+    border-radius: 10px;
+    height: 320px;
+}
+
+.CharacterCard-image{
+    width: 255px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.CharacterCard-name, .CharacterCard-species{
+    color: white;
+    padding: 0px 10px 5px 10px;
+}

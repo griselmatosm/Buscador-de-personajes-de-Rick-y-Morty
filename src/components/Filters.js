@@ -1,9 +1,11 @@
 import React from 'react';
+import '../styles/Filters.css';
 
 function Filters(props) {
   // console.log(props);
   
 const handleInputText = (ev) => {
+  ev.preventDefault();
   const data = {
     name: 'search',
     value: ev.target.value    
@@ -14,7 +16,7 @@ const handleInputText = (ev) => {
   return (
     <form className="Filters">
       <label>
-        <input type="text" placeholder="Introduce el nombre de tu personaje favorito" name="search" value={props.value} onChange={handleInputText}/>
+        <input className="filter-text" type="text" placeholder="Introduce el nombre de un personaje" name="search" value={props.value} onChange={handleInputText}/>
       </label>
     
     </form>

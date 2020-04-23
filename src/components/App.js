@@ -34,12 +34,11 @@ function App() {
     // debugger;
     const characterId = props.match.params.characterId;
     const foundCharacter = characters.find((char) => {
-      return char.id === parseInt(characterId);
+      return char.id === characterId;
     });
-    console.log(foundCharacter, characterId);
-    if (foundCharacter !== undefined) {
+    // if (foundCharacter !== undefined) {
       return <CharacterDetail character={foundCharacter} />;
-    }
+    // }
   };
 
   return (
@@ -48,7 +47,7 @@ function App() {
       <Switch>
         <Route exact path="/">
           <Filters handleInputText={handleInputText} value={searchFilter} />
-          <ChatacterList characters={filteredCharacters} />
+          <ChatacterList characters={filteredCharacters} searchFilter={searchFilter} />
         </Route>
         <Route exact path="/character/:characterId" render={renderCharacterDetail} />
       </Switch>

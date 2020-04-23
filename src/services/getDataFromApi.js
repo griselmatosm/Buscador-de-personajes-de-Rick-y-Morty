@@ -7,7 +7,7 @@ const fetchCharacters = () =>
         // console.log(data);        
       let results = [];
       results = data.results.map((el) => ({
-        id: el.id,
+        id: el.id.toString(),
         name: el.name,
         status: el.status,
         species: el.species,

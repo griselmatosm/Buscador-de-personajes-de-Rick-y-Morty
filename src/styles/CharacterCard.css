@@ -29,7 +29,8 @@
 
 .CharacterCard-name, .CharacterCard-species{
     color: white;
-    padding: 5px 10px 5px 20px;
+    font-size: 18px;
+    padding: 5px 10px 0px 20px;
 }
 
 .CharacterCard-name:hover, .CharacterCard-species:hover{

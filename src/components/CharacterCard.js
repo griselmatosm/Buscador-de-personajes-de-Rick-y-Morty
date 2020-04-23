@@ -7,7 +7,7 @@ function CharacterCard(props) {
   // console.log(props.character);
   return (
     <Link to={`/character/${props.character.id}`}>
-      <li className="ChatacterCard">
+      <li className="CharacterCard">
         <img className="CharacterCard-image" src={props.character.image} alt={`Foto de ${props.character.name}`} title={`Foto de ${props.character.name}`} />
         <h3 className="CharacterCard-name">{props.character.name}</h3>
         <p className="CharacterCard-species">{props.character.species}</p>
@@ -22,8 +22,8 @@ CharacterCard.propTypes = {
     id: PropTypes.string,
     image: PropTypes.string,
     name: PropTypes.string,
-    species: PropTypes.string
-  })
+    species: PropTypes.string,
+  }),
 };
 
 export default CharacterCard;

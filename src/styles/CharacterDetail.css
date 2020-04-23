@@ -1,0 +1,28 @@
+.CharacterDetail{
+    grid-column: span 4;
+    margin: auto;
+    width: 650px;
+    height: 360px;
+    background-color: rgb(14, 145, 145);
+    margin-bottom: 10vh;
+    border-radius: 10px;
+}
+
+.Character-link{
+    display: list-item;
+    text-align: end;
+    color: white;
+    list-style: none;
+    margin: 10px 10px 0px 0px;
+}
+
+.Character-image{
+    border-radius: 50%;
+}
+
+.Character-info{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+}

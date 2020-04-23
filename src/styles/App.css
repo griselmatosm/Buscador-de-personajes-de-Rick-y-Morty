@@ -2,6 +2,6 @@
   background-image: linear-gradient(to top, #1e3c72 0%, #1e3c72 1%, #2a5298 100%);
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  min-width: 100vh;
+  min-height: 100vh;
 }
 

@@ -6,7 +6,8 @@ const fetchCharacters = () =>
     .then((data) => {
         // console.log(data);        
       let results = [];
-      results = data.results.map((el) => ({
+      results = data.results
+      .map((el) => ({
         id: el.id.toString(),
         name: el.name,
         status: el.status,
@@ -14,7 +15,8 @@ const fetchCharacters = () =>
         image: el.image,
         planet: el.origin.name,
         episodes: el.episode.length
-      }));
+      }))
+      .sort((el1, el2) => (el1.name.localeCompare (el2.name)))
       return results;
     });
 

@@ -4,21 +4,26 @@ import { Link } from 'react-router-dom';
 import '../styles/CharacterDetail.css';
 
 function CharacterDetail(props) {
-  
   if (props.character === undefined) {
     return (
       <div className="CharacterDetail">
-        <Link className="Character-link" to="/"> Back <i class="fas fa-chevron-circle-left"></i> </Link>
+        <Link className="Character-link" to="/">
+          {' '}
+          Back <i class="fas fa-chevron-circle-left"></i>{' '}
+        </Link>
         <div className="Character-info-notFound">
-          <p>Sorry, we couldn't find any character.</p>
-          <img src="https://img.icons8.com/cute-clipart/64/000000/nothing-found.png" alt="Character not found"/>
+          <img src="https://fontmeme.com/permalink/200423/8c91dbb30799b4d9be208a09e5ecf9b4.png" alt="fuente-senyum-sokmo-deh" border="0" />
+          <img src="https://img.icons8.com/cute-clipart/64/000000/nothing-found.png" alt="Character not found" />
         </div>
       </div>
     );
   } else {
     return (
       <div className="CharacterDetail">
-        <Link className="Character-link" to="/"> Back <i class="fas fa-chevron-circle-left"></i> </Link>
+        <Link className="Character-link" to="/">
+          {' '}
+          Back <i class="fas fa-chevron-circle-left"></i>{' '}
+        </Link>
         <div className="Character-info">
           <img className="Character-image" src={props.character.image} alt={`Foto de ${props.character.name}`} />
           <div>
@@ -42,9 +47,8 @@ CharacterDetail.propTypes = {
     species: PropTypes.string,
     status: PropTypes.string,
     planet: PropTypes.string,
-    episodes: PropTypes.number
-  })
+    episodes: PropTypes.number,
+  }),
 };
-
 
 export default CharacterDetail;

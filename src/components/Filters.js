@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import '../styles/Filters.css';
 
 function Filters(props) {
@@ -13,6 +14,7 @@ const handleInputText = (ev) => {
   props.handleInputText(data)
 }
 
+//evito que se envíe el formulario al presionar la tecla intro
 const handleSubmit = ev => {
   ev.preventDefault();
 }
@@ -25,5 +27,10 @@ const handleSubmit = ev => {
     </form>
   );
 }
+
+// Aquí defino las propTypes
+Filters.propTypes = {
+  value: PropTypes.string
+};
 
 export default Filters;

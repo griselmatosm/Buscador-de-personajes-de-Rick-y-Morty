@@ -1,5 +1,6 @@
 .App {
-  background-image: linear-gradient(to top, #1e3c72 0%, #1e3c72 1%, #2a5298 100%);
+  /* background-image: linear-gradient(to top, #1e3c72 0%, #1e3c72 1%, #2a5298 100%); */
+  background: url(../images/via-lactea.webp) center center;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   min-height: 100vh;

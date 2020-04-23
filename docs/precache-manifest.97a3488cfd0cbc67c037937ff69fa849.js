@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "2e104b066d189b96c6cb4798f4aa9bc8",
+    "revision": "baf5842e68764ee65889f0c623590126",
     "url": "./index.html"
   },
   {
-    "revision": "b952f40aac12be9f73ce",
-    "url": "./static/css/main.eb80f6b9.chunk.css"
+    "revision": "a95ec580f17da9d453d9",
+    "url": "./static/css/main.f5ab08f0.chunk.css"
   },
   {
     "revision": "36c80aa2087d2b7fa915",
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "./static/js/2.247d3fef.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "b952f40aac12be9f73ce",
-    "url": "./static/js/main.d233de02.chunk.js"
+    "revision": "a95ec580f17da9d453d9",
+    "url": "./static/js/main.07fbdd02.chunk.js"
   },
   {
     "revision": "41c2f3c96e512543836a",
@@ -26,9 +26,5 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "75509f2ec9725b3cef07eefe651a4a8f",
     "url": "./static/media/Rick_and_Morty.75509f2e.png"
-  },
-  {
-    "revision": "f24341ac7c3b414e1ef2787498109d90",
-    "url": "./static/media/via-lactea.f24341ac.webp"
   }
 ]);

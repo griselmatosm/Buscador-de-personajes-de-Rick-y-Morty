@@ -17,7 +17,7 @@ function CharacterDetail(props) {
   } else {
     return (
       <div className="CharacterDetail">
-        <Link className="Character-link" to="/"> Back </Link>
+        <Link className="Character-link" to="/"> Back <i class="fas fa-chevron-circle-left"></i> </Link>
         <div className="Character-info">
           <img className="Character-image" src={props.character.image} alt={`Foto de ${props.character.name}`} />
           <div>

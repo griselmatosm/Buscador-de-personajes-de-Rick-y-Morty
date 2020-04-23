@@ -6,14 +6,20 @@
     background-color: rgb(14, 145, 145);
     margin-bottom: 10vh;
     border-radius: 10px;
+    position: relative;
 }
 
 .Character-link{
-    display: list-item;
-    text-align: end;
     color: white;
-    list-style: none;
-    margin: 10px 10px 0px 0px;
+    position: absolute;
+    right: 12px;
+    margin: 10px;
+    font-size: 20px;
+}
+
+.Character-link:hover{
+    color: #41F210;
+    transform: scale(1.2);
 }
 
 .Character-image{
@@ -25,4 +31,5 @@
     justify-content: space-around;
     align-items: center;
     color: white;
+    padding-top: 30px;
 }

@@ -8,9 +8,10 @@ function CharacterDetail(props) {
   if (props.character === undefined) {
     return (
       <div className="CharacterDetail">
-        <Link className="Character-link" to="/"> Back </Link>
-        <div className="Character-info">
-          <p>Character not found</p>
+        <Link className="Character-link" to="/"> Back <i class="fas fa-chevron-circle-left"></i> </Link>
+        <div className="Character-info-notFound">
+          <p>Sorry, we couldn't find any character.</p>
+          <img src="https://img.icons8.com/cute-clipart/64/000000/nothing-found.png" alt="Character not found"/>
         </div>
       </div>
     );

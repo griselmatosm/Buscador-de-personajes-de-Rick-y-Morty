@@ -9,6 +9,19 @@
     position: relative;
 }
 
+.Character-info-notFound{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+    top: 20%;
+    height: 240px;
+    font-size: 45px;
+    text-align: center;
+    color: white;
+}
+
 .Character-link{
     color: white;
     position: absolute;

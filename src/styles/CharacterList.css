@@ -28,8 +28,6 @@
 }
 
 .CharacterList-notfound-word{
-    color: rgb(18, 53, 8);
-    text-decoration: underline;
     font-weight: bold;
     margin-top: 10px;
     font-size: 20px

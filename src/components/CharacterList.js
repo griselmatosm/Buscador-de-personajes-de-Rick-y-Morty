@@ -18,7 +18,7 @@ function CharacterList(props) {
     return (
       <div className="CharacterList-notfound">
         <p>There is no any character that matches with the word </p>
-        <span className="CharacterList-notfound-word"> {props.searchFilter}</span>
+        <span className="CharacterList-notfound-word"> "{props.searchFilter}"</span>
       </div>
     );
   }

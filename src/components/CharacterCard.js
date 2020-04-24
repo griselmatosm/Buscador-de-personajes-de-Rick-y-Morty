@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 import '../styles/CharacterCard.css';
 
 function CharacterCard(props) {
-  // console.log(props.character);
   return (
     <Link to={`/character/${props.character.id}`}>
       <li className="CharacterCard">

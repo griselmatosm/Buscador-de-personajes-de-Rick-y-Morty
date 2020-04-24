@@ -5,7 +5,7 @@ import '../styles/Header.css';
 function Header() {
   return (
     <header className="Header">
-        <img src={logo} alt="Rick and Morty" title="Rick and Morty" />
+      <img src={logo} alt="Rick and Morty" title="Rick and Morty" />
     </header>
   );
 }

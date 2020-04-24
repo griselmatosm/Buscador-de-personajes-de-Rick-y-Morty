@@ -11,10 +11,10 @@ function App() {
   const [characters, setCharacters] = useState([]);
   const [searchFilter, setSearchFilter] = useState('');
 
+  //petición de datos al api y seteo al estado
   useEffect(() => {
     fetchCharacters().then((data) => setCharacters(data));
   }, []);
-
 
   //event handler
   const handleInputText = (data) => {
@@ -22,28 +22,22 @@ function App() {
   };
 
   //filter and render
-
   const filteredCharacters = characters.filter((character) => {
     return character.name.toUpperCase().includes(searchFilter.toUpperCase());
   });
 
-
   //character detail with React Router
-
   const renderCharacterDetail = (props) => {
-    // debugger;
     const characterId = props.match.params.characterId;
     const foundCharacter = characters.find((char) => {
       return char.id === characterId;
     });
-    // if (foundCharacter !== undefined) {
-      return <CharacterDetail character={foundCharacter} />;
-    // }
+    return <CharacterDetail character={foundCharacter} />;
   };
 
   return (
     <div className="App">
-      <Header/>
+      <Header />
       <Switch>
         <Route exact path="/">
           <Filters handleInputText={handleInputText} value={searchFilter} />

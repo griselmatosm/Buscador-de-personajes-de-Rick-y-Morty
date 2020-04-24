@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 import '../styles/CharacterDetail.css';
 
 function CharacterDetail(props) {
-
   if (props.character === undefined) {
     return (
       <div className="CharacterDetail">

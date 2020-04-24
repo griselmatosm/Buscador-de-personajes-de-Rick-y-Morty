@@ -3,8 +3,7 @@ const ENDPOINT = 'https://raw.githubusercontent.com/Adalab/rick-y-morty/master/d
 const fetchCharacters = () =>
   fetch(ENDPOINT)
     .then((response) => response.json())
-    .then((data) => {
-        // console.log(data);        
+    .then((data) => {    
       let results = [];
       results = data.results
       .map((el) => ({

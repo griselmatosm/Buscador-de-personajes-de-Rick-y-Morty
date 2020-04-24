@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import '../styles/Filters.css';
+import '../styles/Filters.scss';
 
 function Filters(props) {
   const handleInputText = (ev) => {
@@ -18,9 +18,9 @@ function Filters(props) {
   };
 
   return (
-    <form className="Filters" onSubmit={handleSubmit}>
+    <form className="Filter" onSubmit={handleSubmit}>
       <label>
-        <input className="filter-text" type="text" placeholder="Search a character" name="search" value={props.value} onChange={handleInputText}/>
+        <input className="Filter__text" type="text" placeholder="Search a character" name="search" value={props.value} onChange={handleInputText}/>
       </label>
     </form>
   );

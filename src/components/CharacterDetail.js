@@ -1,16 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
-import '../styles/CharacterDetail.css';
+import '../styles/CharacterDetail.scss';
 
 function CharacterDetail(props) {
   if (props.character === undefined) {
     return (
       <div className="CharacterDetail">
-        <Link className="Character-link" to="/">
+        <Link className="CharacterDetail__link" to="/">
           Back <i className="fas fa-chevron-circle-left"></i>
         </Link>
-        <div className="Character-info-notFound">
+        <div className="CharacterDetail__info--notFound">
           <img src="https://fontmeme.com/permalink/200423/8c91dbb30799b4d9be208a09e5ecf9b4.png" alt="fuente-senyum-sokmo-deh" border="0" />
           <img src="https://img.icons8.com/cute-clipart/64/000000/nothing-found.png" alt="Character not found" />
         </div>
@@ -19,11 +19,11 @@ function CharacterDetail(props) {
   } else {
     return (
       <div className="CharacterDetail">
-        <Link className="Character-link" to="/">
+        <Link className="CharacterDetail__link" to="/">
           Back <i className="fas fa-chevron-circle-left"></i>
         </Link>
-        <div className="Character-info">
-          <img className="Character-image" src={props.character.image} alt={`Foto de ${props.character.name}`} />
+        <div className="CharacterDetail__info">
+          <img className="CharacterDetail__image" src={props.character.image} alt={`Foto de ${props.character.name}`} />
           <div>
             <h3>{props.character.name}</h3>
             <p>Status: {props.character.status === 'Alive' ? <i className="fas fa-heart"></i> : props.character.status === 'Dead' ? <i className="fas fa-skull-crossbones"></i> : <i className="fas fa-question"></i>}</p>

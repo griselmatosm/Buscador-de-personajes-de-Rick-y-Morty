@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import CharacterCard from './CharacterCard';
-import '../styles/CharacterList.css';
+import '../styles/CharacterList.scss';
 
 function CharacterList(props) {
   let characterList = props.characters.map((character) => {
@@ -16,9 +16,9 @@ function CharacterList(props) {
     );
   } else {
     return (
-      <div className="CharacterList-notfound">
+      <div className="CharacterList__notfound">
         <p>There is no any character that matches with the word </p>
-        <span className="CharacterList-notfound-word"> "{props.searchFilter}"</span>
+        <span className="CharacterList__notfound--word"> "{props.searchFilter}"</span>
       </div>
     );
   }

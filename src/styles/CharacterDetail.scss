@@ -1,0 +1,44 @@
+.CharacterDetail {
+  grid-column: span 4;
+  margin: auto;
+  width: 650px;
+  height: 360px;
+  background-color: rgb(14, 145, 145);
+  margin-bottom: 10vh;
+  border-radius: 10px;
+  position: relative;
+  &__link {
+    color: white;
+    position: absolute;
+    right: 12px;
+    margin: 10px;
+    font-size: 20px;
+    &:hover {
+      color: #41f210;
+      transform: scale(1.2);
+    }
+  }
+  &__info {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+    padding-top: 30px;
+    font-size: 18px;
+    &--notFound {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      position: relative;
+      top: 20%;
+      height: 240px;
+      font-size: 45px;
+      text-align: center;
+      color: white;
+    }
+  }
+  &__image {
+    border-radius: 50%;
+  }
+}

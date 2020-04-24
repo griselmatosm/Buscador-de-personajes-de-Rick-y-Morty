@@ -1,0 +1,20 @@
+.Filter {
+  text-align: center;
+  grid-column: span 4;
+  &__text {
+    width: 250px;
+    padding: 12px;
+    border-radius: 20px;
+    border: 3px solid #41f210;
+    background-color: transparent;
+    color: white;
+    font-size: 20px;
+    &::placeholder {
+      text-align: center;
+      font-size: 20px;
+    }
+    &:focus {
+      box-shadow: 3px -2px 13px 0px rgba(65, 242, 16, 1);
+    }
+  }
+}

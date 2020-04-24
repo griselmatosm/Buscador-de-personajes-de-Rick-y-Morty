@@ -11,7 +11,7 @@ function App() {
   const [characters, setCharacters] = useState([]);
   const [searchFilter, setSearchFilter] = useState('');
 
-  //petición de datos al api y seteo al estado
+  //data request to api and set state
   useEffect(() => {
     fetchCharacters().then((data) => setCharacters(data));
   }, []);

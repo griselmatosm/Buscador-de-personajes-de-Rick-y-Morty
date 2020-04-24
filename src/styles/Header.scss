@@ -3,4 +3,9 @@
   margin-bottom: 50px;
   text-align: center;
   grid-column: span 4;
+  &__image {
+    @media all and (max-width: 768px) {
+      width: 420px;
+    }
+  }
 }

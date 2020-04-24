@@ -15,7 +15,7 @@ function CharacterCard(props) {
   );
 }
 
-// Aquí defino las propTypes
+//defining propTypes
 CharacterCard.propTypes = {
   character: PropTypes.shape({
     id: PropTypes.string,

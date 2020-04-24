@@ -12,7 +12,7 @@ function Filters(props) {
     props.handleInputText(data);
   };
 
-  //evito que se envíe el formulario al presionar la tecla intro
+  //avoid submitting form when enter key is press
   const handleSubmit = (ev) => {
     ev.preventDefault();
   };
@@ -26,7 +26,7 @@ function Filters(props) {
   );
 }
 
-// Aquí defino las propTypes
+//defining propTypes
 Filters.propTypes = {
   value: PropTypes.string,
 };

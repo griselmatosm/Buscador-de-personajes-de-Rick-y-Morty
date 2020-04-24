@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import '../styles/CharacterDetail.scss';
 
 function CharacterDetail(props) {
+  //if there is no character found, it will be showing a message suggesting that the character requested it doesn't exist
   if (props.character === undefined) {
     return (
       <div className="CharacterDetail">
@@ -26,6 +27,7 @@ function CharacterDetail(props) {
           <img className="CharacterDetail__image" src={props.character.image} alt={`Foto de ${props.character.name}`} />
           <div>
             <h3>{props.character.name}</h3>
+            {/* check status and species types and paint an icon in correspondence */}
             <p>Status: {props.character.status === 'Alive' ? <i className="fas fa-heart"></i> : props.character.status === 'Dead' ? <i className="fas fa-skull-crossbones"></i> : <i className="fas fa-question"></i>}</p>
             <p>Species: {props.character.species === 'Alien' ? <i className="fab fa-reddit-alien"></i> : <i className="fas fa-user-alt"></i>}</p>
             <p>Origin: {props.character.planet}</p>
@@ -37,7 +39,7 @@ function CharacterDetail(props) {
   }
 }
 
-// Aquí defino las propTypes
+//defining propTypes
 CharacterDetail.propTypes = {
   character: PropTypes.shape({
     image: PropTypes.string,

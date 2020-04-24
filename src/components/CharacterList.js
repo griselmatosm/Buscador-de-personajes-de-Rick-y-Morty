@@ -8,6 +8,8 @@ function CharacterList(props) {
     return <CharacterCard key={character.id} character={character} />;
   });
 
+  //if the word writed not match with any name in the array of characters, characterList return an empty array, in that case will be painted on screen a message showing that are not coincidences with the word typed
+
   if (characterList.length > 0) {
     return (
       <section className="CharacterList-section">
@@ -24,7 +26,7 @@ function CharacterList(props) {
   }
 }
 
-// Aquí defino las propTypes
+//defining propTypes
 CharacterList.propTypes = {
   characters: PropTypes.arrayOf(PropTypes.object),
 };

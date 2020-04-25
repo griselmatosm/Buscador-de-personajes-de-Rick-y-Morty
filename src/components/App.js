@@ -22,6 +22,10 @@ function App() {
     setSearchFilter(data.value);
   };
 
+  const handleReset = () => {
+    setSearchFilter('')
+  }
+
   //filter and render
   const filteredCharacters = characters.filter((character) => {
     return character.name.toUpperCase().includes(searchFilter.toUpperCase());
@@ -41,7 +45,7 @@ function App() {
       <Header />
       <Switch>
         <Route exact path="/">
-          <Filters handleInputText={handleInputText} value={searchFilter} />
+          <Filters handleInputText={handleInputText} handleReset={handleReset} value={searchFilter} />
           <ChatacterList characters={filteredCharacters} searchFilter={searchFilter} />
         </Route>
         <Route exact path="/character/:characterId" render={renderCharacterDetail} />

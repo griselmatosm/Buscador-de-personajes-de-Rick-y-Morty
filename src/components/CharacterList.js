@@ -18,10 +18,12 @@ function CharacterList(props) {
     );
   } else {
     return (
-      <div className="CharacterList__notfound">
-        <p>There is no any character that matches with the word </p>
-        <span className="CharacterList__notfound--word"> "{props.searchFilter}"</span>
-      </div>
+      <section className="CharacterList-section">
+        <div className="CharacterList__notfound">
+          <p>There is no any character that matches with the word </p>
+          <span className="CharacterList__notfound--word"> "{props.searchFilter}"</span>
+        </div>
+      </section>
     );
   }
 }

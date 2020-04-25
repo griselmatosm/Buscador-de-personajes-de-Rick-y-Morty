@@ -17,11 +17,18 @@ function Filters(props) {
     ev.preventDefault();
   };
 
+  const handleReset = () => {
+    props.handleReset();
+  };
+
   return (
     <form className="Filter" onSubmit={handleSubmit}>
       <label>
-        <input className="Filter__text" type="text" placeholder="Search a character" name="search" value={props.value} onChange={handleInputText}/>
+        <input className="Filter__text" type="text" placeholder="Search a character" name="search" value={props.value} onChange={handleInputText} />
       </label>
+      <div className="Filter__close" onClick={handleReset}>
+        <i className="fas fa-times-circle"> </i>
+      </div>
     </form>
   );
 }

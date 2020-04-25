@@ -1,6 +1,6 @@
 .Filter {
   text-align: center;
-  grid-column: span 4;
+  position: relative;
   &__text {
     width: 250px;
     padding: 12px;
@@ -15,6 +15,18 @@
     }
     &:focus {
       box-shadow: 3px -2px 13px 0px rgba(65, 242, 16, 1);
+    }
+  }
+  &__close{
+    position: absolute;
+    color: #41f210;
+    top: 30%;
+    right: 40%;
+    font-size: 20px;
+    cursor: pointer;
+    &:hover{
+      color: white;
+      font-size: 22px;
     }
   }
 }

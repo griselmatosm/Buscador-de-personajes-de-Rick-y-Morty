@@ -1,6 +1,7 @@
 .Filter {
   text-align: center;
-  position: relative;
+  display: flex;
+  justify-content: center;
   &__text {
     width: 250px;
     padding: 12px;
@@ -8,7 +9,7 @@
     border: 3px solid #41f210;
     background-color: transparent;
     color: white;
-    font-size: 20px;
+    font-size: 22px;
     &::placeholder {
       text-align: center;
       font-size: 20px;
@@ -18,15 +19,14 @@
     }
   }
   &__close{
-    position: absolute;
     color: #41f210;
-    top: 30%;
-    right: 40%;
     font-size: 20px;
+    margin-top: 15px;
+    margin-left: 10px;
     cursor: pointer;
     &:hover{
       color: white;
-      font-size: 22px;
+      font-size: 24px;
     }
   }
 }

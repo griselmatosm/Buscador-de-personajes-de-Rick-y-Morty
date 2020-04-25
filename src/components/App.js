@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { Route, Switch } from 'react-router-dom';
-import '../styles/App.scss';
+import Header from './Header';
 import Filters from './Filters';
 import ChatacterList from './CharacterList';
 import CharacterDetail from './CharacterDetail';
+import Footer from './Footer';
 import { fetchCharacters } from '../services/getDataFromApi';
-import Header from './Header';
+import '../styles/App.scss';
 
 function App() {
   const [characters, setCharacters] = useState([]);
@@ -45,6 +46,7 @@ function App() {
         </Route>
         <Route exact path="/character/:characterId" render={renderCharacterDetail} />
       </Switch>
+      <Footer/>
     </div>
   );
 }

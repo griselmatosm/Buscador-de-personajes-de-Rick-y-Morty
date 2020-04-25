@@ -5,6 +5,9 @@
   height: 350px;
   transition: all ease 0.7s;
   margin: 30px;
+  @media all and (max-width:768px){
+    margin: 20px;
+  }
   &:hover {
     border: none;
     border-top-left-radius: 50%;

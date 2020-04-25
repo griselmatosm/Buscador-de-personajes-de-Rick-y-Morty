@@ -12,7 +12,7 @@ function CharacterDetail(props) {
           Back <i className="fas fa-chevron-circle-left"></i>
         </Link>
         <div className="CharacterDetail__info--notFound">
-          <img src="https://fontmeme.com/permalink/200423/8c91dbb30799b4d9be208a09e5ecf9b4.png" alt="fuente-senyum-sokmo-deh" border="0" />
+          <img className="notFound-message" src="https://fontmeme.com/permalink/200423/8c91dbb30799b4d9be208a09e5ecf9b4.png" alt="fuente-senyum-sokmo-deh" border="0" />
           <img src="https://img.icons8.com/cute-clipart/64/000000/nothing-found.png" alt="Character not found" />
         </div>
       </div>

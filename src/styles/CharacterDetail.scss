@@ -7,8 +7,8 @@
   margin-bottom: 10vh;
   border-radius: 10px;
   position: relative;
-  @media all and (max-width:768px){
-    width: 360px;
+  @media all and (max-width: 768px) {
+    width: 290px;
   }
   &__link {
     color: white;
@@ -28,7 +28,7 @@
     color: white;
     padding-top: 30px;
     font-size: 18px;
-    @media all and (max-width:768px){
+    @media all and (max-width: 768px) {
       flex-direction: column;
       font-size: 16px;
       text-align: center;
@@ -44,11 +44,17 @@
       font-size: 45px;
       text-align: center;
       color: white;
+      .notFound-message{
+        width: 440px;
+        @media all and (max-width:768px){
+          width: 255px;
+        }
+      }
     }
   }
   &__image {
     border-radius: 50%;
-    @media all and (max-width:768px){
+    @media all and (max-width: 768px) {
       width: 170px;
       margin-bottom: 20px;
     }

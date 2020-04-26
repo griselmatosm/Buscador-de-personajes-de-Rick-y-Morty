@@ -25,6 +25,10 @@
       border: 3px solid #41f210;
     }
   }
+  &__info{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
   &__name,
   &__species {
     color: white;
@@ -33,5 +37,13 @@
     &:hover {
       color: #41f210;
     }
+  }
+  &__name{
+    grid-column: span 2;
+  }
+  &__status{
+    margin: auto;
+    color: #41f210;
+    font-size: x-large;
   }
 }

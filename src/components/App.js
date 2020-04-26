@@ -11,6 +11,7 @@ import '../styles/App.scss';
 function App() {
   const [characters, setCharacters] = useState([]);
   const [searchFilter, setSearchFilter] = useState('');
+  const [statusFilter, setStatusFilter] = useState([]);
 
   //data request to api and set state
   useEffect(() => {
@@ -18,18 +19,44 @@ function App() {
   }, []);
 
   //event handler
-  const handleInputText = (data) => {
-    setSearchFilter(data.value);
+  const handleFilter = (data) => {
+    if (data.name === 'search') {
+      setSearchFilter(data.value);
+    } else if (data.name === 'status') {
+      if (data.checked === true) {
+        const newStatusFilter = [...statusFilter];
+        newStatusFilter.push(data.value);
+        setStatusFilter(newStatusFilter);
+      } else {
+        const newStatusFilter = [...statusFilter];
+        const statusIndex = newStatusFilter.indexOf(data.value);
+        newStatusFilter.splice(statusIndex, 1);
+        setStatusFilter(newStatusFilter);
+      }
+    }
   };
 
-  const handleReset = () => {
-    setSearchFilter('')
-  }
+  const handleReset = (data) => {
+    if (data === 'search-close') {
+      setSearchFilter('');
+    } else {
+      setSearchFilter('');
+      setStatusFilter([]);
+    }
+  };
 
   //filter and render
-  const filteredCharacters = characters.filter((character) => {
-    return character.name.toUpperCase().includes(searchFilter.toUpperCase());
-  });
+  const filteredCharacters = characters
+    .filter((character) => {
+      return character.name.toUpperCase().includes(searchFilter.toUpperCase());
+    })
+    .filter((character) => {
+      if (statusFilter.length === 0) {
+        return true;
+      } else {
+        return statusFilter.includes(character.status);
+      }
+    });
 
   //character detail with React Router
   const renderCharacterDetail = (props) => {
@@ -45,12 +72,12 @@ function App() {
       <Header />
       <Switch>
         <Route exact path="/">
-          <Filters handleInputText={handleInputText} handleReset={handleReset} value={searchFilter} />
+          <Filters handleFilter={handleFilter} handleReset={handleReset} valueSearch={searchFilter} valueStatus={statusFilter} />
           <ChatacterList characters={filteredCharacters} searchFilter={searchFilter} />
         </Route>
         <Route exact path="/character/:characterId" render={renderCharacterDetail} />
       </Switch>
-      <Footer/>
+      <Footer />
     </div>
   );
 }

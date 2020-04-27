@@ -11,6 +11,7 @@ import '../styles/App.scss';
 function App() {
   const [characters, setCharacters] = useState([]);
   const [searchFilter, setSearchFilter] = useState('');
+  const [planetFilter, setPlanetFilter] = useState('');
 
   //data request to api and set state
   useEffect(() => {
@@ -19,7 +20,11 @@ function App() {
 
   //event handler
   const handleInputText = (data) => {
-    setSearchFilter(data.value);
+    if (data.name === 'search') {
+      return setSearchFilter(data.value);
+    } else if(data.name === 'planet') {
+      return setPlanetFilter(data.value)
+    }
   };
 
   const handleReset = () => {
@@ -27,9 +32,13 @@ function App() {
   }
 
   //filter and render
-  const filteredCharacters = characters.filter((character) => {
+  const filteredCharacters = characters
+  .filter((character) => {
     return character.name.toUpperCase().includes(searchFilter.toUpperCase());
-  });
+  })
+  .filter(character => {
+    return character.planet.toUpperCase().includes(planetFilter.toLocaleUpperCase())
+  })
 
   //character detail with React Router
   const renderCharacterDetail = (props) => {
@@ -45,7 +54,7 @@ function App() {
       <Header />
       <Switch>
         <Route exact path="/">
-          <Filters handleInputText={handleInputText} handleReset={handleReset} value={searchFilter} />
+          <Filters handleInputText={handleInputText} handleReset={handleReset} valueSearch={searchFilter} valuePlanet={planetFilter} />
           <ChatacterList characters={filteredCharacters} searchFilter={searchFilter} />
         </Route>
         <Route exact path="/character/:characterId" render={renderCharacterDetail} />
